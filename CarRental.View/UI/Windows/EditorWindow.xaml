@@ -1,0 +1,36 @@
+﻿<Window x:Class="CarRental.View.UI.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="clr-namespace:CarRental.View.UI"
+        xmlns:vm="clr-namespace:CarRental.View.VM"
+        xmlns:data="clr-namespace:CarRental.View.DATA"
+        mc:Ignorable="d"
+        Title="EditorWindow" Height="274" Width="380">
+    <Window.Resources>
+        <vm:EditorViewModel x:Key="VM" />
+        <ui:IsOperationalToBrushConverter x:Key="IsOperationalToBrushConverter" />
+        <ui:BoolInverterConverter x:Key="BoolInverterConverter"/>
+        <ui:ProductionToDateConverter x:Key="ProductionToDateConverter"/>
+    </Window.Resources>
+    <Grid DataContext="{StaticResource VM}">
+        <Label Content="Manufacturer:" HorizontalAlignment="Left" Margin="40,23,0,0" VerticalAlignment="Top" Width="100" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label Content="Class:" HorizontalAlignment="Left" Margin="40,85,0,0" VerticalAlignment="Top" Width="100" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label Content="Model:" HorizontalAlignment="Left" Margin="40,54,0,0" VerticalAlignment="Top" Width="100" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label Content="Production:" HorizontalAlignment="Left" Margin="40,116,0,0" VerticalAlignment="Top" Width="100" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label Content="Operational:" HorizontalAlignment="Left" Margin="40,147,0,0" VerticalAlignment="Top" Width="100" VerticalContentAlignment="Center" FontWeight="Bold"/>
+
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="140,23,0,0" Text="{Binding Path=Car.Manufacturer}" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="140,54,0,0" Text="{Binding Path=Car.Model}" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="140,85,0,0" Text="{Binding Path=Car.Class}" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center"/>
+
+        <DatePicker HorizontalAlignment="Left" Height="26" Margin="140,116,0,0" VerticalAlignment="Top" Width="200" VerticalContentAlignment="Center" SelectedDate="{Binding Path=Car.Production, Mode=TwoWay}" DisplayDate="{Binding DateTime.Now}" FirstDayOfWeek="Tuesday"/>
+
+        <RadioButton Content="Yes" HorizontalAlignment="Left" Height="26" Margin="160,147,0,0" VerticalAlignment="Top" Width="80" VerticalContentAlignment="Center" IsChecked="{Binding Path=Car.IsOperational}"/>
+        <RadioButton Content="No" HorizontalAlignment="Left" Height="26" Margin="260,147,0,0" VerticalAlignment="Top" Width="80" VerticalContentAlignment="Center" IsChecked="{Binding Path=Car.IsOperational, Converter={StaticResource BoolInverterConverter}}" />
+        <Button Content="Save" HorizontalAlignment="Left" Height="30" Margin="60,199,0,0" VerticalAlignment="Top" Width="100" Click="Save"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="30" Margin="220,199,0,0" VerticalAlignment="Top" Width="100" Click="Cancel"/>
+
+    </Grid>
+</Window>

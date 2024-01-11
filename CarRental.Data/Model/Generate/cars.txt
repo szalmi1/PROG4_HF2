@@ -1,0 +1,25 @@
+Ferrari,LaFerrari,Hypercar,2015
+McLaren,Senna,Hypercar,2019
+Porsche,918 Spyder,Hypercar,2017
+Koenigsegg,One,Hypercar,2018
+Bugatti,Chiron,Hypercar,2012
+Tesla,Model 3,Electric,2018
+Hyundai,Ioniq,Electric,2017
+MINI,Hardtop,Electic,2014
+Audi,e-tron,Electic,2019
+Polestar,2,Electic,2021
+Saleen,S7,Supercar,2000
+Ferrari,Enzo,Supercar,2003
+Porsche,Carrera GT,Supercar,2006
+Mercedes-Benz,SLR McLaren,Supercar,2016
+Ford,GT,Supercar,2004
+Audi,Q5,SUV,2012
+Mercedes-Benz,GLC,SUV,2020
+Volvo,XC60,SUV,2017
+Acura,RDX,SUV,2018
+Chevrolet,Suburban 1500,SUV,2011
+Audi,A5,Sedan,2010
+Lexus,ES,Sedan,2013
+Toyota,Corolla,Sedan,2007
+Volkswagen,Jetta,Sedan,2005
+Mitsubishi,Lancer Evolution,Sedan,2010

@@ -1,0 +1,1005 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarRental.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:CarRental.Logic.AdminLogic">
+            <summary>
+            AdminLogic, for operations, what registered users shouldn't have to access.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.#ctor(CarRental.Repository.IOwnerRepository,CarRental.Repository.ICarRepository,CarRental.Repository.IContractorRepository,CarRental.Repository.IRentalRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Logic.AdminLogic"/> class.
+            Passes references to base( ManageLogic), sets Daily admin password, creates ArchivedRentals.
+            </summary>
+            <param name="owner">Owner Repository.</param>
+            <param name="car">Car Repository.</param>
+            <param name="contractor">Contractor Repository.</param>
+            <param name="rental">Rental Repository.</param>
+        </member>
+        <member name="P:CarRental.Logic.AdminLogic.ArchivedRentals">
+            <summary>
+            Gets or sets an IDictionary:
+            Key: DateTime: Start of Finished rental.
+            Value: string: Rental.ToString().
+            Contains Old, archived rentals.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.AdminLogin(System.String)">
+            <summary>
+            Login for Admins.
+            </summary>
+            <param name="password">The entered password.</param>
+            <returns><see cref="T:System.Boolean"/>: login success or fail.</returns>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetManufacturer(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetModel(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetClass(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetProduction(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetIsOperational(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeManufacturer(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeModel(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeClass(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeProduction(System.DateTime,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeIsOperational(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeOwner(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetStart(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetEnd(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetPaid(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetCarReturned(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetLength(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.GetCompleted(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeStart(System.DateTime,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeEnd(System.DateTime,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangePaid(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeCarReturned(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeCar(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ChangeContractor(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ArchiveFinished(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ArchiveAllFinished">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ClearOldArchives(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogic.ShowArchived">
+            <inheritdoc/>
+        </member>
+        <member name="T:CarRental.Logic.ContractorLogic">
+            <summary>
+            ContractorLogic, for operations, what Contractors have to access.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.#ctor(CarRental.Repository.IContractorRepository,CarRental.Repository.IRentalRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Logic.ContractorLogic"/> class.
+            Sets necessary repositories, to work with.
+            </summary>
+            <param name="contractorRepo">Contractor Repository.</param>
+            <param name="rentalRepo">Rental Repository.</param>
+        </member>
+        <member name="P:CarRental.Logic.ContractorLogic.CurrentId">
+            <summary>
+            Gets or sets the current ID of Contractors.
+            </summary>
+        </member>
+        <member name="P:CarRental.Logic.ContractorLogic.CurrentRental">
+            <summary>
+            Gets or sets the current ID of Contractor's rental.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.GetContractor(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ContractorList">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.RentalList(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.UnpaidRentals(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.GetFirstName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.GetLastName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.GetBirthDate(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.GetPhoneNumber(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.GetAddress(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.GetEmail(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeFirstName(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeLastName(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeBirthDate(System.DateTime,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangePhoneNumber(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeAddress(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeEmail(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.AddRental(System.Collections.Generic.IList{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ExtendRental(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ReturnCar(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.PayRental(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:CarRental.Logic.FormatLogic">
+            <summary>
+            FormatLogic, implements formatting inputs.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.FormatLogic.FormatDate(System.String)">
+            <summary>
+            Formats input as a DateTime.
+            </summary>
+            <param name="input">Input needs to format.</param>
+            <returns><see cref="T:System.DateTime"/>.</returns>
+        </member>
+        <member name="M:CarRental.Logic.FormatLogic.FormatBool(System.String)">
+            <summary>
+            Formats input as a bool.
+            </summary>
+            <param name="input">Input needs to format.</param>
+            <returns><see cref="T:System.Boolean"/>.</returns>
+        </member>
+        <member name="M:CarRental.Logic.FormatLogic.FormatString(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Formats input as a String.
+            </summary>
+            <param name="input">Input needs to format.</param>
+            <param name="length">The max length allowed.</param>
+            <param name="allowChar">Allow any non alphabetic char.</param>
+            <returns><see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:CarRental.Logic.FormatLogic.FormatPhoneNumber(System.String)">
+            <summary>
+            Formats input as a Phonenumber (string).
+            </summary>
+            <param name="input">Input needs to format.</param>
+            <returns><see cref="T:System.String"/>: PhoneNumber.</returns>
+        </member>
+        <member name="M:CarRental.Logic.FormatLogic.FormatEmail(System.String,System.Int32)">
+            <summary>
+            Formats input as an Email (string).
+            </summary>
+            <param name="input">Input needs to format.</param>
+            <param name="length">The max length allowed.</param>
+            <returns><see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="T:CarRental.Logic.ManageLogic">
+            <summary>
+            ManageLogic, to create new data. Parent class for AdminLogic.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.#ctor(CarRental.Repository.IOwnerRepository,CarRental.Repository.ICarRepository,CarRental.Repository.IContractorRepository,CarRental.Repository.IRentalRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Logic.ManageLogic"/> class.
+            </summary>
+            <param name="owner"> Owner Repository.</param>
+            <param name="car">Car Repository.</param>
+            <param name="contractor">Contractor Repository.</param>
+            <param name="rental">Rental Repository.</param>
+        </member>
+        <member name="P:CarRental.Logic.ManageLogic.OwnerRepo">
+            <summary>
+            Gets or sets Owner Repository, required to create, delete Owners.
+            </summary>
+        </member>
+        <member name="P:CarRental.Logic.ManageLogic.CarRepo">
+            <summary>
+            Gets or sets Car Repository, required to create, delete Cars.
+            </summary>
+        </member>
+        <member name="P:CarRental.Logic.ManageLogic.ContractorRepo">
+            <summary>
+            Gets or sets Contractor Repository, required to create, delete Contractors.
+            </summary>
+        </member>
+        <member name="P:CarRental.Logic.ManageLogic.RentalRepo">
+            <summary>
+            Gets or sets Rental Repository, required to create, delete Rentals.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.AddOwner(System.Collections.Generic.IList{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.AddCar(System.Collections.Generic.IList{System.String},System.Nullable{System.Int32})">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.AddContractor(System.Collections.Generic.IList{System.String})">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.AddRental(System.Collections.Generic.IList{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.DeleteOwner(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.DeleteCar(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.DeleteContractor(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogic.DeleteRental(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:CarRental.Logic.OwnerLogic">
+            <summary>
+            OwnerLogic, for operations, what Owners have to access.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.#ctor(CarRental.Repository.IOwnerRepository,CarRental.Repository.ICarRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Logic.OwnerLogic"/> class.
+            </summary>
+            <param name="ownerRepo">Owner Repository.</param>
+            <param name="carRepo">Car Repository.</param>
+        </member>
+        <member name="P:CarRental.Logic.OwnerLogic.CurrentId">
+            <summary>
+            Gets or sets the current ID of Owners.
+            </summary>
+        </member>
+        <member name="P:CarRental.Logic.OwnerLogic.CarId">
+            <summary>
+            Gets or sets the current ID of Owner's car.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.GetOwner(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.OwnerList">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.CarList(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.CarAvailable(System.Int32,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.CarNeedFix(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.GetFirstName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.GetLastName(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.GetBirthDate(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.GetPhoneNumber(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.GetRentalCompany(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.GetLocation(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeFirstName(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeLastName(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeBirthDate(System.DateTime,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangePhoneNumber(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeRentalCompany(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeLocation(System.String,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.AddCar(System.Collections.Generic.IList{System.String},System.Nullable{System.Int32})">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.AddCar(System.String,System.String,System.String,System.DateTime,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            Add car logic.
+            </summary>
+            <param name="manufacturer">.</param>
+            <param name="model">..</param>
+            <param name="cLass">...</param>
+            <param name="production">....</param>
+            <param name="isoperational">.....</param>
+            <param name="id">ownerid.</param>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.FixCar(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.SellCar(System.Int32,System.Nullable{System.Int32})">
+            <inheritdoc/>
+        </member>
+        <member name="T:CarRental.Logic.RelationLogic">
+            <summary>
+            RelationLogic, for complex LINQ joins.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogic.#ctor(CarRental.Repository.IOwnerRepository,CarRental.Repository.ICarRepository,CarRental.Repository.IContractorRepository,CarRental.Repository.IRentalRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Logic.RelationLogic"/> class.
+            </summary>
+            <param name="owner">Owner Repository.</param>
+            <param name="car">Car Repository.</param>
+            <param name="contractor">Contractor Repository.</param>
+            <param name="rental">Rental Repository.</param>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogic.NeedToReturn(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogic.WhereAreMyCars(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogic.NearbyRentables(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogic.NeedToReturnAsync(System.Int32)">
+            <summary>
+            Starts an async Task, with NeedToReturn() method.
+            </summary>
+            <param name="contractorId">Parameter for NeedToReturn().</param>
+            <returns>Task, with IDictionary(int, string) result.</returns>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogic.WhereAreMyCarsAsync(System.Int32)">
+            <summary>
+            Starts an async Task, with WhereAreMyCars() method.
+            </summary>
+            <param name="ownerId">Parameter for NeedToReturn().</param>
+            <returns>Task, with IDictionary(int, string) result.</returns>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogic.NearbyRentablesAsync(System.Int32)">
+            <summary>
+            Starts an async Task, with NearbyRentables() method.
+            </summary>
+            <param name="contractorId">Parameter for NeedToReturn().</param>
+            <returns>Task, with IDictionary(int, string) result.</returns>
+        </member>
+        <member name="T:CarRental.Logic.IArchive">
+            <summary>
+            IArchive interface, for Archive old Rentals.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IArchive.ArchiveFinished(System.Int32)">
+            <summary>
+            Archive rental.
+            </summary>
+            <param name="archivedRentalId"> ID of Rental to archive.</param>
+        </member>
+        <member name="M:CarRental.Logic.IArchive.ArchiveAllFinished">
+            <summary>
+            Using the <see cref="M:CarRental.Logic.IArchive.ArchiveFinished(System.Int32)"/> to archive all of the old Rentals.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IArchive.ClearOldArchives(System.Int32)">
+            <summary>
+            Clean the old archives.
+            </summary>
+            <param name="days">Delete only the older than parameter, archives.</param>
+        </member>
+        <member name="M:CarRental.Logic.IArchive.ShowArchived">
+            <summary>
+            Creates a Dictionary of the old archives.
+            </summary>
+            <returns> An <see cref="T:System.Collections.IDictionary"/>, with <see cref="T:System.DateTime"/> Keys, and <see cref="T:System.String"/> Values.</returns>
+        </member>
+        <member name="T:CarRental.Logic.ICarGet">
+            <summary>
+            Getters for car properties.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ICarGet.GetManufacturer(System.Int32)">
+            <summary>
+            Gets the Manufacturer of the Car.
+            </summary>
+            <param name="id">Car's ID.</param>
+            <returns><see cref="T:System.String"/>: Manufacturer.</returns>
+        </member>
+        <member name="M:CarRental.Logic.ICarGet.GetModel(System.Int32)">
+            <summary>
+            Gets the Model of the Car.
+            </summary>
+            <param name="id">Car's ID.</param>
+            <returns><see cref="T:System.String"/>: Model.</returns>
+        </member>
+        <member name="M:CarRental.Logic.ICarGet.GetClass(System.Int32)">
+            <summary>
+            Gets the Class of the Car.
+            </summary>
+            <param name="id">Car's ID.</param>
+            <returns><see cref="T:System.String"/>: Class.</returns>
+        </member>
+        <member name="M:CarRental.Logic.ICarGet.GetProduction(System.Int32)">
+            <summary>
+            Gets the Production of the Car.
+            </summary>
+            <param name="id">Car's ID.</param>
+            <returns><see cref="T:System.DateTime"/>: Production.</returns>
+        </member>
+        <member name="M:CarRental.Logic.ICarGet.GetIsOperational(System.Int32)">
+            <summary>
+            Gets the IsOperational of the Car.
+            </summary>
+            <param name="id">Car's ID.</param>
+            <returns><see cref="T:System.Boolean"/>: IsOperational.</returns>
+        </member>
+        <member name="T:CarRental.Logic.ICarModify">
+            <summary>
+            Setters for Car.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ICarModify.ChangeManufacturer(System.String,System.Int32)">
+            <summary>
+            Sets the Manufacturer of the Car.
+            </summary>
+            <param name="newManufacturer">New Manufacturer.</param>
+            <param name="id">Car's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.ICarModify.ChangeModel(System.String,System.Int32)">
+            <summary>
+            Sets the Model of the Car.
+            </summary>
+            <param name="newModel">New Model.</param>
+            <param name="id">Car's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.ICarModify.ChangeClass(System.String,System.Int32)">
+            <summary>
+            Sets the Class of the Car.
+            </summary>
+            <param name="newClass">New Class.</param>
+            <param name="id">Car's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.ICarModify.ChangeProduction(System.DateTime,System.Int32)">
+            <summary>
+            Sets the Production of the Car.
+            </summary>
+            <param name="newProduction">New Production.</param>
+            <param name="id">Car's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.ICarModify.ChangeIsOperational(System.Int32)">
+            <summary>
+            Changes the IsOperational of the Car.
+            </summary>
+            <param name="id">Car's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.ICarModify.ChangeOwner(System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Changes the Owner of the Car.
+            </summary>
+            <param name="id">Car's ID.</param>
+            <param name="oldOwner"> ID of oldOwner.</param>
+            <param name="newOwner">ID of newOwner.</param>
+        </member>
+        <member name="T:CarRental.Logic.IDelete">
+            <summary>
+            Methods, to delete objects.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IDelete.DeleteOwner(System.Int32)">
+            <summary>
+            Deletes Owner by ID.
+            </summary>
+            <param name="id">Owner ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IDelete.DeleteCar(System.Int32)">
+            <summary>
+            Deletes Car by ID.
+            </summary>
+            <param name="id">Car ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IDelete.DeleteContractor(System.Int32)">
+            <summary>
+            Deletes Contractor by ID.
+            </summary>
+            <param name="id">Contractor ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IDelete.DeleteRental(System.Int32)">
+            <summary>
+            Deletes Rental by ID.
+            </summary>
+            <param name="id">Rental ID.</param>
+        </member>
+        <member name="T:CarRental.Logic.IRegister">
+            <summary>
+            Class to register new data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IRegister.AddOwner(System.Collections.Generic.IList{System.String})">
+            <summary>
+            "Register" new Owner.
+            </summary>
+            <param name="input"> All of the required data of Owner.</param>
+        </member>
+        <member name="M:CarRental.Logic.IRegister.AddCar(System.Collections.Generic.IList{System.String},System.Nullable{System.Int32})">
+            <summary>
+            "Register" new Car.
+            </summary>
+            <param name="input"> All of the required data of Car.</param>
+            <param name="owner"> Owner ID of Car.</param>
+        </member>
+        <member name="M:CarRental.Logic.IRegister.AddContractor(System.Collections.Generic.IList{System.String})">
+            <summary>
+            "Register" new Contractor.
+            </summary>
+            <param name="input"> All of the required data of Contractor.</param>
+        </member>
+        <member name="M:CarRental.Logic.IRegister.AddRental(System.Collections.Generic.IList{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            "Register" new Owner.
+            </summary>
+            <param name="input"> All of the required data of Owner.</param>
+            <param name="contractor"> Contractor ID of Rental.</param>
+            <param name="car"> Car ID of Rental.</param>
+        </member>
+        <member name="T:CarRental.Logic.IRentalGet">
+            <summary>
+            Getters for Rental data, used by Admin.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IRentalGet.GetStart(System.Int32)">
+            <summary>
+            Gets the Start of the Rental.
+            </summary>
+            <param name="id">Rental ID.</param>
+            <returns><see cref="T:System.DateTime"/>: Start.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IRentalGet.GetEnd(System.Int32)">
+            <summary>
+            Gets the End of the Rental.
+            </summary>
+            <param name="id">Rental ID.</param>
+            <returns><see cref="T:System.DateTime"/>: End.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IRentalGet.GetPaid(System.Int32)">
+            <summary>
+            Gets Paid of the Rental.
+            </summary>
+            <param name="id">Rental ID.</param>
+            <returns><see cref="T:System.Boolean"/>: Paid.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IRentalGet.GetCarReturned(System.Int32)">
+            <summary>
+            Gets CarReturned of the Rental.
+            </summary>
+            <param name="id">Rental ID.</param>
+            <returns><see cref="T:System.Boolean"/>: CarReturned.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IRentalGet.GetLength(System.Int32)">
+            <summary>
+            Gets the Length of the Rental.
+            </summary>
+            <param name="id">Rental ID.</param>
+            <returns><see cref="T:System.Int32"/>: Length.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IRentalGet.GetCompleted(System.Int32)">
+            <summary>
+            Gets Completed of the Rental.
+            </summary>
+            <param name="id">Rental ID.</param>
+            <returns><see cref="T:System.Boolean"/>: Completed.</returns>
+        </member>
+        <member name="T:CarRental.Logic.IRentalModify">
+            <summary>
+            Setters for Rental, used by Admin.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IRentalModify.ChangeStart(System.DateTime,System.Int32)">
+            <summary>
+            Changes Start of the Rental.
+            </summary>
+            <param name="input"> New Start.</param>
+            <param name="id">Rental ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IRentalModify.ChangeEnd(System.DateTime,System.Int32)">
+            <summary>
+            Changes End of the Rental.
+            </summary>
+            <param name="input"> New End.</param>
+            <param name="id">Rental ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IRentalModify.ChangePaid(System.Int32)">
+            <summary>
+            Changes Paid of the Rental.
+            </summary>
+            <param name="id">Rental ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IRentalModify.ChangeCarReturned(System.Int32)">
+            <summary>
+            Changes CarReturned of the Rental.
+            </summary>
+            <param name="id">Rental ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IRentalModify.ChangeCar(System.Int32,System.Int32)">
+            <summary>
+            Changes Car of the Rental.
+            </summary>
+            <param name="car">New Car's ID.</param>
+            <param name="id">Rental ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IRentalModify.ChangeContractor(System.Int32,System.Int32)">
+            <summary>
+            Changes Contractor of the Rental.
+            </summary>
+            <param name="contractor"> New Contractor.</param>
+            <param name="id">Rental ID.</param>
+        </member>
+        <member name="T:CarRental.Logic.IContractorGet">
+            <summary>
+            Getters for contractor specific data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IContractorGet.GetAddress(System.Int32)">
+            <summary>
+            Gets the Address of the object.
+            </summary>
+            <param name="id">ID of object.</param>
+            <returns>Address: <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IContractorGet.GetEmail(System.Int32)">
+            <summary>
+            Gets the Email of the object.
+            </summary>
+            <param name="id">ID of object.</param>
+            <returns>Email: <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="T:CarRental.Logic.IContractorManageRental">
+            <summary>
+            Methods for Contractors, to manage rentals.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IContractorManageRental.AddRental(System.Collections.Generic.IList{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Method, to "Register" new rental, as Contractor.
+            </summary>
+            <param name="newRental">The new rental's data.</param>
+            <param name="id">The contractor's id.</param>
+            <param name="carId">The car's id.</param>
+        </member>
+        <member name="M:CarRental.Logic.IContractorManageRental.ExtendRental(System.Int32,System.Int32)">
+            <summary>
+            Method, to "Extend" a rental, as Contractor.
+            </summary>
+            <param name="id">Rental's ID.</param>
+            <param name="days">The Extension's length in days.</param>
+        </member>
+        <member name="M:CarRental.Logic.IContractorManageRental.ReturnCar(System.Int32)">
+            <summary>
+            Method, to "Return car" for a rental, as Contractor.
+            </summary>
+            <param name="id">Rental's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IContractorManageRental.PayRental(System.Int32)">
+            <summary>
+            Method, to "Pay rental", as Contractor.
+            </summary>
+            <param name="id">Rentals's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IContractorManageRental.UnpaidRentals(System.Int32)">
+            <summary>
+            Creates an <see cref="T:System.Collections.Generic.IDictionary`2"></see>, filled by Rentals need to be paid.
+            </summary>
+            <param name="id"> Contractor ID.</param>
+            <returns><see cref="T:System.Collections.Generic.IDictionary`2"></see> TKey: Rental ID, TValue: Rental.ToString().</returns>
+        </member>
+        <member name="T:CarRental.Logic.IContractorModify">
+            <summary>
+            Setters for Contractor specific data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IContractorModify.ChangeAddress(System.String,System.Int32)">
+            <summary>
+            Sets the Address of the Contractor.
+            </summary>
+            <param name="address">New Address.</param>
+            <param name="id">Contractor ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IContractorModify.ChangeEmail(System.String,System.Int32)">
+            <summary>
+            Sets the Email of the Contractor.
+            </summary>
+            <param name="email">New Email.</param>
+            <param name="id">Contractor ID.</param>
+        </member>
+        <member name="T:CarRental.Logic.IContractorShow">
+            <summary>
+            Methods to list, return contractor specific data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IContractorShow.GetContractor(System.Int32)">
+            <summary>
+            Method, to show rental's contractor.
+            </summary>
+            <param name="id">Rental ID.</param>
+            <returns>Key: ContractorId, Value: Contractor.ToString().</returns>
+        </member>
+        <member name="M:CarRental.Logic.IContractorShow.ContractorList">
+            <summary>
+            Method, to list contractors.
+            </summary>
+            <returns><see cref="T:System.Collections.IDictionary"/> where: Keys: Contractors ID, Values: Contractor.ToString().</returns>
+        </member>
+        <member name="M:CarRental.Logic.IContractorShow.RentalList(System.Int32)">
+            <summary>
+            Method, to list contractors rentals.
+            </summary>
+            <param name="id">Contractor ID.</param>
+            <returns><see cref="T:System.Collections.IDictionary"/> where: Keys: Rentals ID, Values: Rental.ToString().</returns>
+        </member>
+        <member name="T:CarRental.Logic.IRelation">
+            <summary>
+            Interface of RelationLogic methods.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IRelation.NeedToReturn(System.Int32)">
+            <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2"/> of Cars need to return.
+            </summary>
+            <param name="contractorId">Contractor's ID.</param>
+            <returns><see cref="T:System.Collections.Generic.Dictionary`2"/>TKey: Rentals id, with the Car, need to return. TValue: necessary informations.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IRelation.WhereAreMyCars(System.Int32)">
+            <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2"/> of Car is in a rental.
+            </summary>
+            <param name="ownerId">Contractor's ID.</param>
+            <returns><see cref="T:System.Collections.Generic.Dictionary`2"/>TKey: Car's id. TValue: necessary informations.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IRelation.NearbyRentables(System.Int32)">
+            <summary>
+            Creates a <see cref="T:System.Collections.Generic.Dictionary`2"/> of Cars need to return.
+            </summary>
+            <param name="contractorId">Contractor's ID.</param>
+            <returns><see cref="T:System.Collections.Generic.Dictionary`2"/>TKey: Car's id, which is rentable. TValue: necessary informations.</returns>
+        </member>
+        <member name="T:CarRental.Logic.IUserGet">
+            <summary>
+            Getters for personal data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IUserGet.GetFirstName(System.Int32)">
+            <summary>
+            Gets the FirstName of the object.
+            </summary>
+            <param name="id">ID of object.</param>
+            <returns>FirstName: <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IUserGet.GetLastName(System.Int32)">
+            <summary>
+            Gets the LastName of the object.
+            </summary>
+            <param name="id">ID of object.</param>
+            <returns>LastName: <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IUserGet.GetBirthDate(System.Int32)">
+            <summary>
+            Gets the BirthDate of the object.
+            </summary>
+            <param name="id">ID of object.</param>
+            <returns>BirthDate: <see cref="T:System.DateTime"/>.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IUserGet.GetPhoneNumber(System.Int32)">
+            <summary>
+            Gets the PhoneNumber of the object.
+            </summary>
+            <param name="id">ID of object.</param>
+            <returns>PhoneNumber: <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="T:CarRental.Logic.IUserModify">
+            <summary>
+            Setters for person specific data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IUserModify.ChangeFirstName(System.String,System.Int32)">
+            <summary>
+            Changes the FirstName of object.
+            </summary>
+            <param name="input"> The new FirstName.</param>
+            <param name="id">ID of object.</param>
+        </member>
+        <member name="M:CarRental.Logic.IUserModify.ChangeLastName(System.String,System.Int32)">
+            <summary>
+            Changes the LastName of object.
+            </summary>
+            <param name="input"> The new LastName.</param>
+            <param name="id">ID of object.</param>
+        </member>
+        <member name="M:CarRental.Logic.IUserModify.ChangeBirthDate(System.DateTime,System.Int32)">
+            <summary>
+            Changes the BirthDate of object.
+            </summary>
+            <param name="input"> The new BirthDate.</param>
+            <param name="id">ID of object.</param>
+        </member>
+        <member name="M:CarRental.Logic.IUserModify.ChangePhoneNumber(System.String,System.Int32)">
+            <summary>
+            Changes the PhoneNumbere of object.
+            </summary>
+            <param name="input"> The new PhoneNumber.</param>
+            <param name="id">ID of object.</param>
+        </member>
+        <member name="T:CarRental.Logic.IOwnerGet">
+            <summary>
+            Getters for owner specific data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerGet.GetRentalCompany(System.Int32)">
+            <summary>
+            Gets the RentalCompany of the object.
+            </summary>
+            <param name="id">ID of object.</param>
+            <returns>RentalCompany: <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerGet.GetLocation(System.Int32)">
+            <summary>
+            Gets the Location of the object.
+            </summary>
+            <param name="id">ID of object.</param>
+            <returns>Location: <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="T:CarRental.Logic.IOwnerManageCar">
+            <summary>
+            Methods for Owners, to manage car.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerManageCar.AddCar(System.Collections.Generic.IList{System.String},System.Nullable{System.Int32})">
+            <summary>
+            Method, to "Register" new car, as an Owner.
+            </summary>
+            <param name="newCar">The newCars data.</param>
+            <param name="id">the newCars owner id.</param>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerManageCar.FixCar(System.Int32)">
+            <summary>
+            Method, to "Fix" a car, as an Owner.
+            </summary>
+            <param name="id">Car's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerManageCar.SellCar(System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Method, to "Sell" a car, as an Owner.
+            </summary>
+            <param name="id">Car's ID.</param>
+            <param name="newOwner">New owner's ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerManageCar.CarNeedFix(System.Int32)">
+            <summary>
+            Creates an <see cref="T:System.Collections.Generic.IDictionary`2"></see>, filled by Cars need to fix.
+            </summary>
+            <param name="id"> Owner ID.</param>
+            <returns><see cref="T:System.Collections.Generic.IDictionary`2"></see> TKey: Car ID, TValue: Car.ToString().</returns>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerManageCar.CarAvailable(System.Int32,System.Boolean)">
+            <summary>
+            Creates an <see cref="T:System.Collections.Generic.IDictionary`2"></see>, filled by Cars available, or not available.
+            </summary>
+            <param name="id"> Owner ID.</param>
+            <param name="availableOrUnavailable">Available(true) or Unavailable(false).</param>
+            <returns><see cref="T:System.Collections.Generic.IDictionary`2"></see> TKey: Car ID, TValue: Car.ToString().</returns>
+        </member>
+        <member name="T:CarRental.Logic.IOwnerModify">
+            <summary>
+            Setters for Owner specific data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerModify.ChangeRentalCompany(System.String,System.Int32)">
+            <summary>
+            Sets the RentalCompany of the Owner.
+            </summary>
+            <param name="input">New RentalCompany.</param>
+            <param name="id">Owner ID.</param>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerModify.ChangeLocation(System.String,System.Int32)">
+            <summary>
+            Sets the Location of the Owner.
+            </summary>
+            <param name="input">New Location.</param>
+            <param name="id">Owner ID.</param>
+        </member>
+        <member name="T:CarRental.Logic.IOwnerShow">
+            <summary>
+            Methods to list, return owner specific data.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerShow.GetOwner(System.Int32)">
+            <summary>
+            Method, to show cars owner.
+            </summary>
+            <param name="id">Car ID.</param>
+            <returns>Key: OwnerId, Value: Owner.ToString().</returns>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerShow.OwnerList">
+            <summary>
+            Method, to list owners.
+            </summary>
+            <returns><see cref="T:System.Collections.IDictionary"/> where: Keys: Owners ID, Values: Owner.ToString().</returns>
+        </member>
+        <member name="M:CarRental.Logic.IOwnerShow.CarList(System.Int32)">
+            <summary>
+            Method, to list owners car.
+            </summary>
+            <param name="id">Owner ID.</param>
+            <returns><see cref="T:System.Collections.IDictionary"/> where: Keys: Cars ID, Values: Car.ToString().</returns>
+        </member>
+    </members>
+</doc>

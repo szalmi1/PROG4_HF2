@@ -1,0 +1,13 @@
+﻿@model CarRental.MVC.Models.CarListViewModel
+
+@{
+    ViewData["Title"] = "CarsIndex";
+}
+
+<h2>Cars Index</h2>
+
+<p style="color:red">@TempData["editResults"]</p>
+
+@await Html.PartialAsync("CarsEdit", Model.EditedCar)
+
+@await Html.PartialAsync("CarsList", Model.ListOfCars)

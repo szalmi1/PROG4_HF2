@@ -1,0 +1,32 @@
+﻿@model CarRental.MVC.Models.Car
+
+@{
+    ViewData["Title"] = "CarsDetails";
+}
+
+<h2> Datasheet of one car</h2>
+
+@Html.ActionLink("Back to the list", "Index")
+
+<table border="1">
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Id)</td>
+        <td>@Html.DisplayFor(m => m.Id)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Manufacturer)</td>
+        <td>@Html.DisplayFor(m => m.Manufacturer)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Model)</td>
+        <td>@Html.DisplayFor(m => m.Model)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.Production)</td>
+        <td>@Html.DisplayFor(m => m.Production)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(m => m.IsOperational)</td>
+        <td>@Html.DisplayFor(m => m.IsOperational)</td>
+    </tr>
+</table>

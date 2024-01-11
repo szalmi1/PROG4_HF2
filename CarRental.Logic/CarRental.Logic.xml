@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarRental.Logic</name>
+    </assembly>
+    <members>
+        <member name="M:CarRental.Logic.CarLogic.GetAvailable">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.GetOperational">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.ChangeCarManufacturer(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.ChangeCarModel(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.ChangeCarClass(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.ChangeCarProduction(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.ChangeCarIsOperational(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.ChangeCarOwner(System.Int32,CarRental.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.CarLogic.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeContractorName(System.Int32,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeContractorBirthDate(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeContractorPhoneNumber(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeContractorAddress(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.ChangeContractorEmail(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogic.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.Logic`1.GetAll">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.Logic`1.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeOwnerName(System.Int32,System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeOwnerBirthDate(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeOwnerPhoneNumber(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeOwnerRentalCompany(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.ChangeOwnerSite(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.AddOwnerCar(System.Int32,CarRental.Data.Car)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.RemoveOwnerCar(System.Int32,CarRental.Data.Car)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogic.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.RentalLogic.ChangeRentalStart(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.RentalLogic.ChangeRentalEnd(System.Int32,System.DateTime)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.RentalLogic.ChangeRentalPaid(System.Int32,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.RentalLogic.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Logic.RentalLogic.GetHashCode">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

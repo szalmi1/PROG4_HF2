@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CarRental.MVC.Models.Car>
+
+<h2>CarList</h2>
+
+@if (Model.Count() == 0)
+{
+    <p>No data in the database!</p>
+}
+else
+{
+<table border="1">
+    <tr>
+        <th>@Html.DisplayNameFor(m => m.First().Manufacturer)</th>
+        <th>@Html.DisplayNameFor(m => m.First().Model)</th>
+        <th>Datasheet</th>
+        <th>Delete</th>
+        <th>Modify</th>
+    </tr>
+    @foreach(var car in Model)
+	{
+        <tr>
+            <th>@Html.DisplayFor(m => car.Manufacturer)</th>
+            <th>@Html.DisplayFor(m => car.Model)</th>
+            <td>@Html.ActionLink("[SHOW]", "Details", new { id = car.Id })</td>
+            <td>@Html.ActionLink("[DEL]", "Remove", new { id = car.Id })</td>
+            <td>@Html.ActionLink("[EDIT]", "Edit", new { id = car.Id })</td>
+        </tr>
+	}
+</table>
+}

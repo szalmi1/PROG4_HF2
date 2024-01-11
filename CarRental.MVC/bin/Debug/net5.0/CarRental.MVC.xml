@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarRental.MVC</name>
+    </assembly>
+    <members>
+        <member name="T:CarRental.MVC.Controllers.CarsController">
+            <summary>
+            The Controller.
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Controllers.CarsController.#ctor(CarRental.MVC.Factory,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.MVC.Controllers.CarsController"/> class.
+            </summary>
+            <param name="factory">.</param>
+            <param name="mapper">..</param>
+        </member>
+        <member name="M:CarRental.MVC.Controllers.CarsController.Index">
+            <summary>
+            Index site.
+            </summary>
+            <returns>Index.</returns>
+        </member>
+        <member name="M:CarRental.MVC.Controllers.CarsController.Details(System.Int32)">
+            <summary>
+            Details site.
+            </summary>
+            <param name="id">Selected car.</param>
+            <returns>Returns the selected car's details.</returns>
+        </member>
+        <member name="M:CarRental.MVC.Controllers.CarsController.Remove(System.Int32)">
+            <summary>
+            Remove site.
+            </summary>
+            <param name="id">Selected car.</param>
+            <returns>To index.</returns>
+        </member>
+        <member name="M:CarRental.MVC.Controllers.CarsController.Edit(System.Int32)">
+            <summary>
+            Edit the selected car's details.
+            </summary>
+            <param name="id">Selected car.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:CarRental.MVC.Controllers.CarsController.Edit(CarRental.MVC.Models.Car,System.String)">
+            <summary>
+            Edit car.
+            </summary>
+            <param name="car">.</param>
+            <param name="editAction">..</param>
+            <returns>...</returns>
+        </member>
+        <member name="T:CarRental.MVC.Factory">
+            <summary>
+            Class, what creates all of the Logics, Repositories, Data, using Dependency Injection.
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Factory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.MVC.Factory"/> class.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Factory.Admin">
+            <summary>
+            Gets or sets admin Logic, for High permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Factory.Owner">
+            <summary>
+            Gets or sets owner Logic, for Normal permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Factory.Contractor">
+            <summary>
+            Gets or sets contractor Logic, for Normal permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Factory.Relation">
+            <summary>
+            Gets or sets relation Logic, for complex two or more table operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Factory.Manage">
+            <summary>
+            Gets or sets manage Logic, for add and delete operations.
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Factory.Dispose">
+            <summary>
+            Disposable interface.
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Factory.Dispose(System.Boolean)">
+            <summary>
+            Dispose.
+            </summary>
+            <param name="disposing">Yes/no.</param>
+        </member>
+        <member name="T:CarRental.MVC.Models.Car">
+            <summary>
+            Owner.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.Car.Id">
+            <summary>
+            Gets or sets Id.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.Car.Manufacturer">
+            <summary>
+            Gets or sets manufacturer.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.Car.Model">
+            <summary>
+            Gets or sets Model.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.Car.Class">
+            <summary>
+            Gets or sets class.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.Car.Production">
+            <summary>
+            Gets or sets Date.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.Car.IsOperational">
+            <summary>
+            Gets or sets a value indicating whether isOperational.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.Car.OwnerId">
+            <summary>
+            Gets or sets a value of ownerId.
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Models.Car.CopyFrom(CarRental.MVC.Models.Car)">
+            <summary>
+            Copies a Car into another.
+            </summary>
+            <param name="other">Other car.</param>
+        </member>
+        <member name="T:CarRental.MVC.Models.CarListViewModel">
+            <summary>
+            CarListViewModel.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.CarListViewModel.ListOfCars">
+            <summary>
+            Gets or sets the list of the cars.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.CarListViewModel.EditedCar">
+            <summary>
+            Gets or sets the selected car.
+            </summary>
+        </member>
+        <member name="T:CarRental.MVC.Models.ErrorViewModel">
+            <summary>
+            ErrorViewModel.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.ErrorViewModel.RequestId">
+            <summary>
+            Gets or sets Request id.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Models.ErrorViewModel.ShowRequestId">
+            <summary>
+            Gets a value indicating whether ShowRequestId.
+            </summary>
+        </member>
+        <member name="T:CarRental.MVC.Models.MapperFactory">
+            <summary>
+            MapperFactory.
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Models.MapperFactory.CreateMapper">
+            <summary>
+            CreateMapper.
+            </summary>
+            <returns>.</returns>
+        </member>
+        <member name="T:CarRental.MVC.Program">
+            <summary>
+            Hát, mit is mondhatnék...
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Program.Main(System.String[])">
+            <summary>
+            Nem tudom, miért...
+            </summary>
+            <param name="args">.</param>
+        </member>
+        <member name="M:CarRental.MVC.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Érdekli ennyire a stylecopot.
+            </summary>
+            <param name="args">.</param>
+            <returns>..</returns>
+        </member>
+        <member name="T:CarRental.MVC.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CarRental.MVC.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:CarRental.MVC.Startup">
+            <summary>
+            Leave me.
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.MVC.Startup"/> class.
+            </summary>
+            <param name="configuration">.</param>
+        </member>
+        <member name="P:CarRental.MVC.Startup.Configuration">
+            <summary>
+            Gets configuration.
+            </summary>
+        </member>
+        <member name="M:CarRental.MVC.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">.</param>
+        </member>
+        <member name="M:CarRental.MVC.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">.</param>
+            <param name="env">..</param>
+        </member>
+    </members>
+</doc>

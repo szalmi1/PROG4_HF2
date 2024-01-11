@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarRental.Logic.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:CarRental.Logic.AdminLogicTests">
+            <summary>
+            Class implements Tests.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.AdminLogicTests.AdminLogicGetManufacturer">
+            <summary>
+            Tests.
+            </summary>
+        </member>
+        <member name="T:CarRental.Logic.ContractorLogicTests">
+            <summary>
+            Class implements Tests.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ContractorLogicTests.ContractorLogicModifyRental">
+            <summary>
+            Tests.
+            </summary>
+        </member>
+        <member name="T:CarRental.Logic.ManageLogicTests">
+            <summary>
+            Class implements Tests.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogicTests.ManageLogicAddRental">
+            <summary>
+            Tests.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.ManageLogicTests.ManageLogicDeleteCar">
+            <summary>
+            Tests.
+            </summary>
+        </member>
+        <member name="T:CarRental.Logic.OwnerLogicTests">
+            <summary>
+            Class implements Tests.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.OwnerLogicTests.OwnerLogicCarListTest">
+            <summary>
+            Tests.
+            </summary>
+        </member>
+        <member name="T:CarRental.Logic.RelationLogicTests">
+            <summary>
+            Class implements Tests.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogicTests.RelationLogicNeedToReturn">
+            <summary>
+            Tests.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogicTests.RelationLogicWhereAreMyCars">
+            <summary>
+            Tests WhereAreMyCars() method.
+            </summary>
+        </member>
+        <member name="M:CarRental.Logic.RelationLogicTests.RelationLogicNearbyRentables">
+            <summary>
+            Tests.
+            </summary>
+        </member>
+    </members>
+</doc>

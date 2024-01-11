@@ -1,0 +1,44 @@
+From 1a39e5fcf351e69ecb5626fd25a3585be4d0bdab Mon Sep 17 00:00:00 2001
+From: szalmi1 <szalmi007@stud.uni-obuda.hu>
+Date: Sun, 6 Dec 2020 23:57:27 +0100
+Subject: [PATCH] no message
+
+---
+ CarRental.Logic/Classes/ManageLogic.cs | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+diff --git a/CarRental.Logic/Classes/ManageLogic.cs b/CarRental.Logic/Classes/ManageLogic.cs
+index ad2904b..12d5bd7 100644
+--- a/CarRental.Logic/Classes/ManageLogic.cs
++++ b/CarRental.Logic/Classes/ManageLogic.cs
+@@ -86,18 +86,12 @@ namespace CarRental.Logic
+             {
+                 if (input != null && input.Count == 5)
+                 {
+-                    try
+-                    {
+                         var in1 = FormatLogic.FormatString(input[0], 20, true);
+                         var in2 = FormatLogic.FormatString(input[1], 20, true);
+                         var in3 = FormatLogic.FormatString(input[2], 20, true);
+                         var in4 = FormatLogic.FormatDate(input[3]);
+                         var in5 = FormatLogic.FormatBool(input[4]);
+                         this.CarRepo.Add(in1, in2, in3, in4, in5, owner);
+-                    }
+-                    catch (Exception)
+-                    {
+-                    }
+                 }
+                 else
+                 {
+@@ -142,7 +136,7 @@ namespace CarRental.Logic
+         {
+             try
+             {
+-                if (input != null && input.Count == 4)
++                if (input != null && input.Count == 2)
+                 {
+                     var in1 = FormatLogic.FormatDate(input[0]);
+                     var in2 = FormatLogic.FormatDate(input[1]);
+-- 
+2.30.0.windows.1
+

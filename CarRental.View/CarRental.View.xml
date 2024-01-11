@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarRental.WPF</name>
+    </assembly>
+    <members>
+        <member name="T:CarRental.View.App">
+            <summary>
+            Interaction logic for App.xaml.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:CarRental.View.App.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.App"/> class.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:CarRental.View.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:CarRental.View.BL.CarLogic">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.View.BL.CarLogic.#ctor(CarRental.View.BL.IEditorService,GalaSoft.MvvmLight.Messaging.IMessenger,CarRental.View.Factory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.BL.CarLogic"/> class.
+            </summary>
+            <param name="editorService">IEditorService.</param>
+            <param name="messengerService">IMessenger.</param>
+            <param name="factory">Factory.</param>
+        </member>
+        <member name="M:CarRental.View.BL.CarLogic.CarIsOk(CarRental.View.DATA.Car)">
+            <summary>
+            Checks the cars parameters.
+            </summary>
+            <param name="car">Car.</param>
+            <returns>true or false, if the parameters was correct.</returns>
+        </member>
+        <member name="M:CarRental.View.BL.CarLogic.AddCar(System.Collections.Generic.IList{CarRental.View.DATA.Car})">
+            <summary>
+            Add car operation.
+            </summary>
+            <param name="list">Car list.</param>
+        </member>
+        <member name="M:CarRental.View.BL.CarLogic.ModCar(CarRental.View.DATA.Car)">
+            <summary>
+            Modify car operation.
+            </summary>
+            <param name="car">Car to modify.</param>
+        </member>
+        <member name="M:CarRental.View.BL.CarLogic.DelCar(System.Collections.Generic.IList{CarRental.View.DATA.Car},CarRental.View.DATA.Car)">
+            <summary>
+            Delete car operation.
+            </summary>
+            <param name="list">Car list.</param>
+            <param name="car">List to modify.</param>
+        </member>
+        <member name="M:CarRental.View.BL.CarLogic.GetAllCars">
+            <summary>
+            Gets all cars.
+            </summary>
+            <returns>All cars.</returns>
+        </member>
+        <member name="T:CarRental.View.BL.ICarLogic">
+            <summary>
+            Car logic.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.BL.ICarLogic.AddCar(System.Collections.Generic.IList{CarRental.View.DATA.Car})">
+            <summary>
+            AddCar operation.
+            </summary>
+            <param name="list">CarList.</param>
+        </member>
+        <member name="M:CarRental.View.BL.ICarLogic.ModCar(CarRental.View.DATA.Car)">
+            <summary>
+            ModCar operation.
+            </summary>
+            <param name="car">Car.</param>
+        </member>
+        <member name="M:CarRental.View.BL.ICarLogic.DelCar(System.Collections.Generic.IList{CarRental.View.DATA.Car},CarRental.View.DATA.Car)">
+            <summary>
+            DelCar operation.
+            </summary>
+            <param name="list">Car list.</param>
+            <param name="car">Car.</param>
+        </member>
+        <member name="M:CarRental.View.BL.ICarLogic.GetAllCars">
+            <summary>
+            Get all Cars operation.
+            </summary>
+            <returns>List of Cars.</returns>
+        </member>
+        <member name="T:CarRental.View.BL.IEditorService">
+            <summary>
+            IEditorService.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.BL.IEditorService.EditCar(CarRental.View.DATA.Car)">
+            <summary>
+            Edit car operation.
+            </summary>
+            <param name="c">Car.</param>
+            <returns>True when, success and false, if not.</returns>
+        </member>
+        <member name="T:CarRental.View.DATA.Car">
+            <summary>
+            Owner.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.DATA.Car.Id">
+            <summary>
+            Gets or sets Id.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.DATA.Car.Manufacturer">
+            <summary>
+            Gets or sets manufacturer.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.DATA.Car.Model">
+            <summary>
+            Gets or sets Model.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.DATA.Car.Class">
+            <summary>
+            Gets or sets class.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.DATA.Car.Production">
+            <summary>
+            Gets or sets production.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.DATA.Car.IsOperational">
+            <summary>
+            Gets or sets a value indicating whether isOperational.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.DATA.Car.OwnerId">
+            <summary>
+            Gets or sets a value of ownerId.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.DATA.Car.CopyFrom(CarRental.View.DATA.Car)">
+            <summary>
+            Copies a Car into another.
+            </summary>
+            <param name="other">Other car.</param>
+        </member>
+        <member name="T:CarRental.View.Factory">
+            <summary>
+            Class, what creates all of the Logics, Repositories, Data, using Dependency Injection.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.Factory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.Factory"/> class.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.Factory.Admin">
+            <summary>
+            Gets or sets admin Logic, for High permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.Factory.Owner">
+            <summary>
+            Gets or sets owner Logic, for Normal permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.Factory.Contractor">
+            <summary>
+            Gets or sets contractor Logic, for Normal permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.Factory.Relation">
+            <summary>
+            Gets or sets relation Logic, for complex two or more table operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.Factory.Manage">
+            <summary>
+            Gets or sets manage Logic, for add and delete operations.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.Factory.Dispose">
+            <summary>
+            Disposable interface.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.Factory.Dispose(System.Boolean)">
+            <summary>
+            Dispose.
+            </summary>
+            <param name="disposing">Yes/no.</param>
+        </member>
+        <member name="T:CarRental.View.MyIoc">
+            <summary>
+            MyIoc class.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.MyIoc.Instance">
+            <summary>
+            Gets instance of MyIoc.
+            </summary>
+        </member>
+        <member name="T:CarRental.View.UI.BoolInverterConverter">
+            <summary>
+            Bool converter for Radio button.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.UI.BoolInverterConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converter.
+            </summary>
+            <param name="value">.</param>
+            <param name="targetType">..</param>
+            <param name="parameter">...</param>
+            <param name="culture">....</param>
+            <returns>value.</returns>
+        </member>
+        <member name="M:CarRental.View.UI.BoolInverterConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert back.
+            </summary>
+            <param name="value">.</param>
+            <param name="targetType">..</param>
+            <param name="parameter">...</param>
+            <param name="culture">....</param>
+            <returns>value.</returns>
+        </member>
+        <member name="T:CarRental.View.UI.EditorServiceViaWindow">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.View.UI.EditorServiceViaWindow.EditCar(CarRental.View.DATA.Car)">
+            <summary>
+            Edits car.
+            </summary>
+            <param name="c">Car.</param>
+            <returns>True or false, if the edit was successful.</returns>
+        </member>
+        <member name="T:CarRental.View.UI.IsOperationalToBrushConverter">
+            <summary>
+            Colored background converter.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.UI.IsOperationalToBrushConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert to.
+            </summary>
+            <param name="value">.</param>
+            <param name="targetType">..</param>
+            <param name="parameter">...</param>
+            <param name="culture">....</param>
+            <returns>.....</returns>
+        </member>
+        <member name="M:CarRental.View.UI.IsOperationalToBrushConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convert back.
+            </summary>
+            <param name="value">.</param>
+            <param name="targetType">..</param>
+            <param name="parameter">...</param>
+            <param name="culture">....</param>
+            <returns>.....</returns>
+        </member>
+        <member name="T:CarRental.View.UI.ProductionToDateConverter">
+            <summary>
+            Converter for Date.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.UI.ProductionToDateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts Date to Production..
+            </summary>
+            <param name="value">.</param>
+            <param name="targetType">..</param>
+            <param name="parameter">...</param>
+            <param name="culture">....</param>
+            <returns>Production.</returns>
+        </member>
+        <member name="M:CarRental.View.UI.ProductionToDateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts Production to date.
+            </summary>
+            <param name="value">.</param>
+            <param name="targetType">..</param>
+            <param name="parameter">...</param>
+            <param name="culture">....</param>
+            <returns>Date.</returns>
+        </member>
+        <member name="T:CarRental.View.UI.EditorWindow">
+            <summary>
+            Interaction logic for EditorWindow.xaml.
+            </summary>
+            <summary>
+            EditorWindow
+            </summary>
+        </member>
+        <member name="M:CarRental.View.UI.EditorWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.UI.EditorWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.UI.EditorWindow.#ctor(CarRental.View.DATA.Car)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.UI.EditorWindow"/> class.
+            </summary>
+            <param name="newCar">Owner.</param>
+        </member>
+        <member name="P:CarRental.View.UI.EditorWindow.Car">
+            <summary>
+            Gets VM.Car.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.UI.EditorWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CarRental.View.UI.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml.
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:CarRental.View.UI.MainWindow.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.UI.MainWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.UI.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CarRental.View.VM.EditorViewModel">
+            <summary>
+            EditorVM.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.VM.EditorViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.VM.EditorViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.VM.EditorViewModel.Car">
+            <summary>
+            Gets or sets the car.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.VM.EditorViewModel.Dispose">
+            <summary>
+            Fantastic dispose method.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.VM.EditorViewModel.Dispose(System.Boolean)">
+            <summary>
+            Dispose this.
+            </summary>
+            <param name="v">Yes/no.</param>
+        </member>
+        <member name="T:CarRental.View.VM.MainViewModel">
+            <summary>
+            MainWindowModel.
+            </summary>
+        </member>
+        <member name="M:CarRental.View.VM.MainViewModel.#ctor(CarRental.View.BL.ICarLogic,CarRental.View.Factory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.VM.MainViewModel"/> class.
+            </summary>
+            <param name="logic">IOwnerLogic.</param>
+            <param name="factory">.</param>
+        </member>
+        <member name="M:CarRental.View.VM.MainViewModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.View.VM.MainViewModel"/> class.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.VM.MainViewModel.CarSelected">
+            <summary>
+            Gets or sets Car.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.VM.MainViewModel.Cars">
+            <summary>
+            Gets car collection.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.VM.MainViewModel.AddCmd">
+            <summary>
+            Gets add command.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.VM.MainViewModel.ModCmd">
+            <summary>
+            Gets modify command.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.VM.MainViewModel.DelCmd">
+            <summary>
+            Gets delete command.
+            </summary>
+        </member>
+        <member name="P:CarRental.View.VM.MainViewModel.ExiCmd">
+            <summary>
+            Gets delete command.
+            </summary>
+        </member>
+    </members>
+</doc>

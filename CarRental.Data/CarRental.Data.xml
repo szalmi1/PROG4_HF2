@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarRental.Data</name>
+    </assembly>
+    <members>
+        <member name="T:CarRental.Data.Car">
+            <summary>
+            Car public class.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.CarId">
+            <summary>
+            Gets or sets CarId.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.Manufacturer">
+            <summary>
+            Gets or sets Manufacturer.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.Model">
+            <summary>
+            Gets or sets Model.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.Class">
+            <summary>
+            Gets or sets Class.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.Production">
+            <summary>
+            Gets or sets Production.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.IsOperational">
+            <summary>
+            Gets or sets a value indicating whether IsOperational or not.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.Owner">
+            <summary>
+            Gets or sets Owner.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.OwnerId">
+            <summary>
+            Gets or sets OwnerId.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.Rental">
+            <summary>
+            Gets or sets Rental.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Car.RentalId">
+            <summary>
+            Gets or sets RentalId.
+            </summary>
+        </member>
+        <member name="M:CarRental.Data.Car.ToString">
+            <summary>
+            Overrides ToString(), with special string.
+            </summary>
+            <returns>Formatted string.</returns>
+        </member>
+        <member name="T:CarRental.Data.Contractor">
+            <summary>
+            Contractor class.
+            </summary>
+        </member>
+        <member name="M:CarRental.Data.Contractor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Data.Contractor"/> class.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Contractor.ContractorId">
+            <summary>
+            Gets or sets ContractorId.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Contractor.FirstName">
+            <summary>
+            Gets or sets FirstName.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Contractor.LastName">
+            <summary>
+            Gets or sets LastName.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Contractor.BirthDate">
+            <summary>
+            Gets or sets BirthDate.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Contractor.PhoneNumber">
+            <summary>
+            Gets or sets PhoneNumber.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Contractor.Address">
+            <summary>
+            Gets or sets Address.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Contractor.Email">
+            <summary>
+            Gets or sets Email.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Contractor.Rentals">
+            <summary>
+            Gets Rentals.
+            </summary>
+        </member>
+        <member name="M:CarRental.Data.Contractor.ToString">
+            <summary>
+            Overrides ToString(), with special string.
+            </summary>
+            <returns>Formatted string.</returns>
+        </member>
+        <member name="T:CarRental.Data.Owner">
+            <summary>
+            Owner class.
+            </summary>
+        </member>
+        <member name="M:CarRental.Data.Owner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Data.Owner"/> class.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Owner.OwnerId">
+            <summary>
+            Gets or sets OwnerId.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Owner.FirstName">
+            <summary>
+            Gets or sets FirstName.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Owner.LastName">
+            <summary>
+            Gets or sets LastName.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Owner.BirthDate">
+            <summary>
+            Gets or sets BirthDate.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Owner.PhoneNumber">
+            <summary>
+            Gets or sets PhoneNumber.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Owner.RentalCompany">
+            <summary>
+            Gets or sets RentalCompany.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Owner.Site">
+            <summary>
+            Gets or sets Site.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Owner.Cars">
+            <summary>
+            Gets Cars.
+            </summary>
+        </member>
+        <member name="M:CarRental.Data.Owner.ToString">
+            <summary>
+            Overrides ToString(), with special string.
+            </summary>
+            <returns>Formatted string.</returns>
+        </member>
+        <member name="T:CarRental.Data.Rental">
+            --------------------------------------------------------------------------------
+            <summary>
+            Rental Class.
+            </summary>
+            --------------------------------------------------------------------------------
+        </member>
+        <member name="P:CarRental.Data.Rental.RentalId">
+            <summary>
+            Gets or sets the ID of Rental.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.Start">
+            <summary>
+            Gets or sets the start date of the rent.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.End">
+            <summary>
+            Gets or sets the end date of the rent.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.Paid">
+            <summary>
+            Gets or sets a value indicating whether Paid or not.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.Length">
+            <summary>
+            Gets the length of the rental.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.Completed">
+            <summary>
+            Gets a value indicating whether Completed or not.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.Contractor">
+            <summary>
+            Gets or sets Contractor.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.ContractorId">
+            <summary>
+            Gets or sets ContractorId.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.Car">
+            <summary>
+            Gets or sets Car.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.Rental.CarId">
+            <summary>
+            Gets or sets CarId.
+            </summary>
+        </member>
+        <member name="M:CarRental.Data.Rental.ToString">
+            <summary>
+            Overrides ToString(), with special string.
+            </summary>
+            <returns>Formatted string.</returns>
+        </member>
+        <member name="T:CarRental.Data.RentalContext">
+            <summary>
+            RentalContext class.
+            </summary>
+        </member>
+        <member name="M:CarRental.Data.RentalContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Data.RentalContext"/> class.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.RentalContext.Owners">
+            <summary>
+            Gets or sets Owners.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.RentalContext.Cars">
+            <summary>
+            Gets or sets Cars.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.RentalContext.Contractors">
+            <summary>
+            Gets or sets Contractors.
+            </summary>
+        </member>
+        <member name="P:CarRental.Data.RentalContext.Rentals">
+            <summary>
+            Gets or sets Rentals.
+            </summary>
+        </member>
+        <member name="M:CarRental.Data.RentalContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:CarRental.Data.RentalContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

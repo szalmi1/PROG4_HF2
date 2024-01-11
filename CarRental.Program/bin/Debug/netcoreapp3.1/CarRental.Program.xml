@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarRental.Program</name>
+    </assembly>
+    <members>
+        <member name="T:CarRental.ConsoleApp.Add">
+            <summary>
+            Class to create new instances of Database objects.
+            </summary>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Add.Owner">
+            <summary>
+            Creates a new Owner, using <see cref="M:CarRental.ConsoleApp.Add.AddObject(System.Int32)"/>.
+            </summary>
+            <returns>Data of Owner's each necessary field.</returns>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Add.Car">
+            <summary>
+            Creates a new Car, using <see cref="M:CarRental.ConsoleApp.Add.AddObject(System.Int32)"/>.
+            </summary>
+            <returns>Data of Car's each necessary field.</returns>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Add.Contractor">
+            <summary>
+            Creates a new Contractor, using <see cref="M:CarRental.ConsoleApp.Add.AddObject(System.Int32)"/>.
+            </summary>
+            <returns>Data of Contractor's each necessary field.</returns>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Add.Rental">
+            <summary>
+            Creates a new Rental, using <see cref="M:CarRental.ConsoleApp.Add.AddObject(System.Int32)"/>.
+            </summary>
+            <returns>Data of Rental's each necessary field.</returns>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Add.AddObject(System.Int32)">
+            <summary>
+            Creates a new Object.
+            </summary>
+            <returns>Data of objects each necessary field.</returns>
+        </member>
+        <member name="T:CarRental.ConsoleApp.Factory">
+            <summary>
+            Class, what creates all of the Logics, Repositories, Data, using Dependency Injection.
+            </summary>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Factory.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.ConsoleApp.Factory"/> class.
+            </summary>
+        </member>
+        <member name="P:CarRental.ConsoleApp.Factory.Admin">
+            <summary>
+            Gets or sets admin Logic, for High permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.ConsoleApp.Factory.Owner">
+            <summary>
+            Gets or sets owner Logic, for Normal permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.ConsoleApp.Factory.Contractor">
+            <summary>
+            Gets or sets contractor Logic, for Normal permission level operations.
+            </summary>
+        </member>
+        <member name="P:CarRental.ConsoleApp.Factory.Relation">
+            <summary>
+            Gets or sets relation Logic, for complex two or more table operations.
+            </summary>
+        </member>
+        <member name="T:CarRental.ConsoleApp.Field">
+            <summary>
+            Special class, to help <see cref="T:CarRental.ConsoleApp.Fields"/> class to store changes.
+            </summary>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Field.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.ConsoleApp.Field"/> class.
+            Initializes a new instance of the<see cref="T:CarRental.ConsoleApp.Field"/> class.
+            </summary>
+            <param name="name">Name of field.</param>
+            <param name="value">Data of field.</param>
+        </member>
+        <member name="P:CarRental.ConsoleApp.Field.Name">
+            <summary>
+            Gets or sets name of the data, need to store.
+            </summary>
+        </member>
+        <member name="P:CarRental.ConsoleApp.Field.Value">
+            <summary>
+            Gets or sets value of the data, need to store.
+            </summary>
+        </member>
+        <member name="T:CarRental.ConsoleApp.Fields">
+            <summary>
+            Special class, for <see cref="T:CarRental.ConsoleApp.Add"/> class, to help store changes.
+            </summary>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Fields.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.ConsoleApp.Fields"/> class.
+            Initializes a new instance of the<see cref="T:CarRental.ConsoleApp.Fields"/> class.
+            </summary>
+            <param name="number">1: Owner, 2: Car, 3: Contractor, 4: Rental.</param>
+        </member>
+        <member name="P:CarRental.ConsoleApp.Fields.FieldList">
+            <summary>
+            Gets list of fields, stores data.
+            </summary>
+        </member>
+        <member name="T:CarRental.ConsoleApp.Items">
+            <summary>
+            Items class: implements listing item(s).
+            </summary>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Items.ShowSingle(System.Collections.Generic.KeyValuePair{System.Int32,System.String})">
+            <summary>
+            Shows the data of one object.
+            </summary>
+            <param name="item"><see cref="T:System.Collections.Generic.KeyValuePair"/> Key: ID, Value: Object.ToString().</param>
+            <returns>Returns the ID of Object.</returns>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Items.Archived(System.Collections.Generic.IDictionary{System.DateTime,System.String})">
+            <summary>
+            Shows the archives of old rentals.
+            </summary>
+            <param name="list"><see cref="T:System.Collections.Generic.KeyValuePair"/> Key: Start of the Rentals, Value: Object.ToString().</param>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Items.Select(System.Collections.Generic.IDictionary{System.Int32,System.String},System.Boolean)">
+            <summary>
+            Lists the input Dictionary.
+            </summary>
+            <param name="list">Object Dictionary.</param>
+            <param name="subselect">Show submenu: Yes(true), No(false).</param>
+            <returns>ID of the selected Item.</returns>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Items.SubDic(System.Collections.Generic.IDictionary{System.Int32,System.String},System.Int32,System.Int32)">
+            <summary>
+            Helper method, for listing only X items, per page.
+            </summary>
+            <param name="dict">Input dictionary.</param>
+            <param name="first">First item to show.</param>
+            <param name="last">Last item to show.</param>
+            <returns>The Sub Dictionary.</returns>
+        </member>
+        <member name="T:CarRental.ConsoleApp.Modify">
+            <summary>
+            Class to modify objects.
+            </summary>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Modify.Owner(CarRental.Logic.OwnerLogic)">
+            <summary>
+            Modifies current Owner.
+            </summary>
+            <param name="owner">OwnerLogic.</param>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Modify.Car(CarRental.Logic.AdminLogic,System.Int32)">
+            <summary>
+            Modifies Car.
+            </summary>
+            <param name="admin">AdminLogic.</param>
+            <param name="id">Car id.</param>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Modify.Contractor(CarRental.Logic.ContractorLogic)">
+            <summary>
+            Modifies Contractor.
+            </summary>
+            <param name="contractor">Contractor Logic.</param>
+        </member>
+        <member name="M:CarRental.ConsoleApp.Modify.Rental(CarRental.Logic.AdminLogic,System.Int32)">
+            <summary>
+            Modifies Rental.
+            </summary>
+            <param name="admin">AdminRepository.</param>
+            <param name="id">Rental id.</param>
+        </member>
+        <member name="T:CarRental.ConsoleApp.UserOrientedMenu">
+            <summary>
+            UserOrientedMenu class: The Menu of The Console application.
+            </summary>
+        </member>
+        <member name="M:CarRental.ConsoleApp.UserOrientedMenu.#ctor(System.String[],CarRental.ConsoleApp.Factory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.ConsoleApp.UserOrientedMenu"/> class.
+            </summary>
+            <param name="args">Args from Console application.</param>
+            <param name="lib">Factory libary.</param>
+        </member>
+        <member name="T:CarRental.ConsoleApp.Program">
+            <summary>
+            The Console application for the Solution.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,16 @@
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\bin\Debug\netcoreapp3.1\CarRentalDatabase.mdf
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\bin\Debug\netcoreapp3.1\CarRentalDatabase_log.ldf
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\bin\Debug\netcoreapp3.1\CarRental.Data.deps.json
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\bin\Debug\netcoreapp3.1\CarRental.Data.runtimeconfig.json
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\bin\Debug\netcoreapp3.1\CarRental.Data.runtimeconfig.dev.json
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\bin\Debug\netcoreapp3.1\CarRental.Data.dll
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\bin\Debug\netcoreapp3.1\CarRental.Data.pdb
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\bin\Debug\netcoreapp3.1\CarRental.Data.xml
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\obj\Debug\netcoreapp3.1\CarRental.Data.csprojAssemblyReference.cache
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\obj\Debug\netcoreapp3.1\CarRental.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\obj\Debug\netcoreapp3.1\CarRental.Data.AssemblyInfoInputs.cache
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\obj\Debug\netcoreapp3.1\CarRental.Data.AssemblyInfo.cs
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\obj\Debug\netcoreapp3.1\CarRental.Data.csproj.CoreCompileInputs.cache
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\obj\Debug\netcoreapp3.1\CarRental.Data.dll
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\obj\Debug\netcoreapp3.1\CarRental.Data.pdb
+D:\Desktop\Asztal\Egyetem\Prog4\PROG4_HF1\CarRental.Data\obj\Debug\netcoreapp3.1\CarRental.Data.genruntimeconfig.cache

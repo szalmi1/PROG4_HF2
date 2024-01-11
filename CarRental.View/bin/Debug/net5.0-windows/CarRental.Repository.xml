@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CarRental.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:CarRental.Repository.CarRepository">
+            <summary>
+            Car Repository.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.CarRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Repository.CarRepository"/> class.
+            </summary>
+            <param name="ctx">DBContext.</param>
+        </member>
+        <member name="M:CarRental.Repository.CarRepository.Add(System.String,System.String,System.String,System.DateTime,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            Adds a new <see cref="T:CarRental.Data.Car"/> to the Car table by reaching Data Layer.
+            </summary>
+            <param name="manufacturer">Cars manufacturer name.</param>
+            <param name="model">Car model name.</param>
+            <param name="carclass">Car class.</param>
+            <param name="production">Car's production date.</param>
+            <param name="isOperational">Is the car operational?.</param>
+            <param name="ownerId">The owner's ID, can be null.</param>
+        </member>
+        <member name="M:CarRental.Repository.CarRepository.GetOne(System.Int32)">
+            <summary>
+            Returns Car object with the given ID.
+            </summary>
+            <param name="id">Car's id.</param>
+            <returns><see cref="T:CarRental.Data.Car"/> object.</returns>
+        </member>
+        <member name="T:CarRental.Repository.ContractorRepository">
+            <summary>
+            ContractorRepository class.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.ContractorRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Repository.ContractorRepository"/> class.
+            </summary>
+            <param name="ctx">DBContext.</param>
+        </member>
+        <member name="M:CarRental.Repository.ContractorRepository.Add(System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Adds a new <see cref="T:CarRental.Data.Contractor"/> to the Contractor table by reaching Data Layer.
+            </summary>
+            <param name="firstName">Contractor's firstname.</param>
+            <param name="lastName">Contractor's lastname.</param>
+            <param name="birthDate">Contractor's birthdate.</param>
+            <param name="phoneNumber">Contractor's phonenumber.</param>
+            <param name="address">Contractor's city.</param>
+            <param name="email">Contractor's, email.</param>
+        </member>
+        <member name="M:CarRental.Repository.ContractorRepository.GetOne(System.Int32)">
+            <summary>
+            Gets the Contractor object by ID.
+            </summary>
+            <param name="id">ID.</param>
+            <returns>Contractor by id.</returns>
+        </member>
+        <member name="T:CarRental.Repository.OwnerRepository">
+            <summary>
+            OwnerRepository class.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.OwnerRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Repository.OwnerRepository"/> class.
+            </summary>
+            <param name="ctx">DBContext.</param>
+        </member>
+        <member name="M:CarRental.Repository.OwnerRepository.Add(System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Adds a new <see cref="T:CarRental.Data.Contractor"/> to the Contractor table by reaching Data Layer.
+            </summary>
+            <param name="firstName">Owner's first name.</param>
+            <param name="lastName">Owner's last name.</param>
+            <param name="birthDate">Owner's birth date.</param>
+            <param name="phoneNumber">Owner's phone number.</param>
+            <param name="rentalCompany">Owner's rental company.</param>
+            <param name="location">Owner's, location.</param>
+        </member>
+        <member name="M:CarRental.Repository.OwnerRepository.GetOne(System.Int32)">
+            <summary>
+            Gets the Owner object by ID.
+            </summary>
+            <param name="id">ID.</param>
+            <returns>Owner by id.</returns>
+        </member>
+        <member name="T:CarRental.Repository.RentalRepository">
+            <summary>
+            RentalRepository class.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.RentalRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Repository.RentalRepository"/> class.
+            </summary>
+            <param name="ctx">DBContext.</param>
+        </member>
+        <member name="M:CarRental.Repository.RentalRepository.Add(System.DateTime,System.DateTime,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Adds a new <see cref="T:CarRental.Data.Rental"/> to the Rental table by reaching Data Layer.
+            </summary>
+            <param name="startDate">Owner's first name.</param>
+            <param name="endDate">Owner's last name.</param>
+            <param name="contractorId">Owner's birth date.</param>
+            <param name="carId">Owner's phone number.</param>
+        </member>
+        <member name="M:CarRental.Repository.RentalRepository.GetOne(System.Int32)">
+            <summary>
+            Gets the Rental object by ID.
+            </summary>
+            <param name="id">ID.</param>
+            <returns>Rental by id.</returns>
+        </member>
+        <member name="T:CarRental.Repository.RepositoryBase`1">
+            <summary>
+            Repository generic class.
+            </summary>
+            <typeparam name="T">Gets a child class as parameter.</typeparam>
+        </member>
+        <member name="F:CarRental.Repository.RepositoryBase`1.ctx">
+            <summary>
+            DBContext instance.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.RepositoryBase`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:CarRental.Repository.RepositoryBase`1"/> class.
+            </summary>
+            <param name="ctx">DBContext.</param>
+        </member>
+        <member name="M:CarRental.Repository.RepositoryBase`1.Add(`0)">
+            <summary>
+            Adds a new instance to the Database, by reaching Data layer.
+            </summary>
+            <param name="newInstance">New instance.</param>
+        </member>
+        <member name="M:CarRental.Repository.RepositoryBase`1.GetAll">
+            <summary>
+            Gets all of the object of the selected Table, by reaching Data layer.
+            </summary>
+            <returns><see cref="T:System.Linq.IQueryable`1"/> from table data.</returns>
+        </member>
+        <member name="M:CarRental.Repository.RepositoryBase`1.GetOne(System.Int32)">
+            <summary>
+            Gets the object of the selected Table by id, by reaching Data layer.
+            </summary>
+            <param name="id">The object's id.</param>
+            <returns>Object by id.</returns>
+        </member>
+        <member name="M:CarRental.Repository.RepositoryBase`1.Delete(`0)">
+            <summary>
+            Delete the object of the selected Table by id, by reaching Data layer.
+            </summary>
+            <param name="oldInstance">The object.</param>
+        </member>
+        <member name="M:CarRental.Repository.RepositoryBase`1.Delete(System.Int32)">
+            <summary>
+            Delete the object of the selected Table by id, by reaching Data layer.
+            </summary>
+            <param name="id">The object.</param>
+        </member>
+        <member name="M:CarRental.Repository.RepositoryBase`1.Save">
+            <summary>
+            Saves the changes made on the database.
+            </summary>
+        </member>
+        <member name="T:CarRental.Repository.ICarRepository">
+            <summary>
+            ICarRepository interface.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.ICarRepository.Add(System.String,System.String,System.String,System.DateTime,System.Boolean,System.Nullable{System.Int32})">
+            <summary>
+            Adds a new <see cref="T:CarRental.Data.Car"/> to the Car table by reaching Data Layer.
+            </summary>
+            <param name="manufacturer">Cars manufacturer name.</param>
+            <param name="model">Car model name.</param>
+            <param name="carclass">Car class.</param>
+            <param name="production">Car's production date.</param>
+            <param name="isOperational">Is the car operational?.</param>
+            <param name="ownerId">The owner's ID, can be null.</param>
+        </member>
+        <member name="M:CarRental.Repository.ICarRepository.GetOne(System.Int32)">
+            <summary>
+            Returns Car object with the given ID.
+            </summary>
+            <param name="id">Car's id.</param>
+            <returns><see cref="T:CarRental.Data.Car"/> object.</returns>
+        </member>
+        <member name="T:CarRental.Repository.IContractorRepository">
+            <summary>
+            IContractorRepository interface.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.IContractorRepository.Add(System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Adds a new <see cref="T:CarRental.Data.Contractor"/> to the Contractor table by reaching Data Layer.
+            </summary>
+            <param name="firstName">Contractor's firstname.</param>
+            <param name="lastName">Contractor's lastname.</param>
+            <param name="birthDate">Contractor's birthdate.</param>
+            <param name="phoneNumber">Contractor's phonenumber.</param>
+            <param name="address">Contractor's city.</param>
+            <param name="email">Contractor's, email.</param>
+        </member>
+        <member name="M:CarRental.Repository.IContractorRepository.GetOne(System.Int32)">
+            <summary>
+            Gets the Contractor object by ID.
+            </summary>
+            <param name="id">ID.</param>
+            <returns>Contractor by id.</returns>
+        </member>
+        <member name="T:CarRental.Repository.IOwnerRepository">
+            <summary>
+            IOwnerRepository interface.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.IOwnerRepository.Add(System.String,System.String,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Adds a new <see cref="T:CarRental.Data.Contractor"/> to the Contractor table by reaching Data Layer.
+            </summary>
+            <param name="firstName">Owner's first name.</param>
+            <param name="lastName">Owner's last name.</param>
+            <param name="birthDate">Owner's birth date.</param>
+            <param name="phoneNumber">Owner's phone number.</param>
+            <param name="rentalCompany">Owner's rental company.</param>
+            <param name="location">Owner's, location.</param>
+        </member>
+        <member name="M:CarRental.Repository.IOwnerRepository.GetOne(System.Int32)">
+            <summary>
+            Gets the Owner object by ID.
+            </summary>
+            <param name="id">ID.</param>
+            <returns>Owner by id.</returns>
+        </member>
+        <member name="T:CarRental.Repository.IRentalRepository">
+            <summary>
+            IRentalRepository interface.
+            </summary>
+        </member>
+        <member name="M:CarRental.Repository.IRentalRepository.Add(System.DateTime,System.DateTime,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Adds a new <see cref="T:CarRental.Data.Rental"/> to the Rental table by reaching Data Layer.
+            </summary>
+            <param name="startDate">Owner's first name.</param>
+            <param name="endDate">Owner's last name.</param>
+            <param name="contractorId">Owner's birth date.</param>
+            <param name="carId">Owner's phone number.</param>
+        </member>
+        <member name="M:CarRental.Repository.IRentalRepository.GetOne(System.Int32)">
+            <summary>
+            Gets the Rental object by ID.
+            </summary>
+            <param name="id">ID.</param>
+            <returns>Rental by id.</returns>
+        </member>
+        <member name="T:CarRental.Repository.IRepository`1">
+            <summary>
+            Parent class.
+            </summary>
+            <typeparam name="T">Object type.</typeparam>
+        </member>
+        <member name="M:CarRental.Repository.IRepository`1.Add(`0)">
+            <summary>
+            Adds a new instance to the Database, by reaching Data layer.
+            </summary>
+            <param name="newInstance">New instance.</param>
+        </member>
+        <member name="M:CarRental.Repository.IRepository`1.Delete(`0)">
+            <summary>
+            Delete the object of the selected Table by id, by reaching Data layer.
+            </summary>
+            <param name="oldInstance">The object.</param>
+        </member>
+        <member name="M:CarRental.Repository.IRepository`1.Delete(System.Int32)">
+            <summary>
+            Delete the object of the selected Table by id, by reaching Data layer.
+            </summary>
+            <param name="id">The object.</param>
+        </member>
+        <member name="M:CarRental.Repository.IRepository`1.GetOne(System.Int32)">
+            <summary>
+            Gets the object of the selected Table by id, by reaching Data layer.
+            </summary>
+            <param name="id">The object's id.</param>
+            <returns>Object by id.</returns>
+        </member>
+        <member name="M:CarRental.Repository.IRepository`1.GetAll">
+            <summary>
+            Gets all of the object of the selected Table, by reaching Data layer.
+            </summary>
+            <returns><see cref="T:System.Linq.IQueryable`1"/> from table data.</returns>
+        </member>
+        <member name="M:CarRental.Repository.IRepository`1.Save">
+            <summary>
+            Saves the changes made on the database.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,28 @@
+var class_car_rental_1_1_logic_1_1_owner_logic =
+[
+    [ "OwnerLogic", "class_car_rental_1_1_logic_1_1_owner_logic.html#a8ec81cd069e53105f111dd287b3e834c", null ],
+    [ "AddCar", "class_car_rental_1_1_logic_1_1_owner_logic.html#a6cc64fce4148c43b95b5eace9e4d0e38", null ],
+    [ "CarAvailable", "class_car_rental_1_1_logic_1_1_owner_logic.html#a334962a5b128e3e2355a64ffedea0553", null ],
+    [ "CarList", "class_car_rental_1_1_logic_1_1_owner_logic.html#a33edee66644635da8a4e95a423805416", null ],
+    [ "CarNeedFix", "class_car_rental_1_1_logic_1_1_owner_logic.html#a96cccad2d10f5a9695de813e73b1de9d", null ],
+    [ "ChangeBirthDate", "class_car_rental_1_1_logic_1_1_owner_logic.html#a7899394cd8f99bf54803e7b3ae1ca9cf", null ],
+    [ "ChangeFirstName", "class_car_rental_1_1_logic_1_1_owner_logic.html#aa53f9fa8b5badf4244baaa602255f824", null ],
+    [ "ChangeLastName", "class_car_rental_1_1_logic_1_1_owner_logic.html#a41a13264b1122f32d137fe3cd5618735", null ],
+    [ "ChangeLocation", "class_car_rental_1_1_logic_1_1_owner_logic.html#a17b451ffbc88533512f67ae7c335a9c9", null ],
+    [ "ChangePhoneNumber", "class_car_rental_1_1_logic_1_1_owner_logic.html#acc16ea12fa9e7703b3d705fed5e1a489", null ],
+    [ "ChangeRentalCompany", "class_car_rental_1_1_logic_1_1_owner_logic.html#a5cb810adb01d00d0a208d6ee3421f77e", null ],
+    [ "FixCar", "class_car_rental_1_1_logic_1_1_owner_logic.html#a8c2d8d3be9aae8f6706ae6896d13a5bb", null ],
+    [ "GetBirthDate", "class_car_rental_1_1_logic_1_1_owner_logic.html#aa8d1f2e11565f14d08eccbea402400cf", null ],
+    [ "GetFirstName", "class_car_rental_1_1_logic_1_1_owner_logic.html#adb9989f16b0be742588186a41e719182", null ],
+    [ "GetLastName", "class_car_rental_1_1_logic_1_1_owner_logic.html#aad66b3f2e6002b4f99cbfd47123f7edc", null ],
+    [ "GetLocation", "class_car_rental_1_1_logic_1_1_owner_logic.html#aecbecda55ee9872a01397f300999692e", null ],
+    [ "GetOwner", "class_car_rental_1_1_logic_1_1_owner_logic.html#a673f0b13a488f74665252f73d8b5028c", null ],
+    [ "GetPhoneNumber", "class_car_rental_1_1_logic_1_1_owner_logic.html#a958e9f7c96ee68b41c68c3c5ada2c8b4", null ],
+    [ "GetRentalCompany", "class_car_rental_1_1_logic_1_1_owner_logic.html#aab2c3102487568626a94fc30168391e7", null ],
+    [ "OwnerList", "class_car_rental_1_1_logic_1_1_owner_logic.html#a061e59efc24dab2625ea5a594f1caacc", null ],
+    [ "SellCar", "class_car_rental_1_1_logic_1_1_owner_logic.html#a8a5bc8ad99a015c9bca87c0b928194bc", null ],
+    [ "CarId", "class_car_rental_1_1_logic_1_1_owner_logic.html#a76d58c187653ee4ecaf667c7bca685cc", null ],
+    [ "CarRepo", "class_car_rental_1_1_logic_1_1_owner_logic.html#a8f10072d1a42579a40ef7d32c0a567cd", null ],
+    [ "CurrentId", "class_car_rental_1_1_logic_1_1_owner_logic.html#a366bc864b2dda207c7b2b9efde6475b3", null ],
+    [ "OwnerRepo", "class_car_rental_1_1_logic_1_1_owner_logic.html#ad2a7e0ec808493c0e6f0312103de4b6c", null ]
+];

@@ -1,0 +1,27 @@
+﻿@model CarRental.MVC.Models.Car
+
+<h2>CarsEdit</h2>
+
+@using (Html.BeginForm("Edit", "Cars"))
+{
+    @Html.ValidationSummary()
+
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.Id)
+    @Html.Hidden("editAction", ViewData["editAction"].ToString())
+
+    <div class="editor-label">@Html.LabelFor(m => m.Manufacturer)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Manufacturer)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Model)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Model)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.Production)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.Production)</div>
+
+    <div class="editor-label">@Html.LabelFor(m => m.IsOperational)</div>
+    <div class="editor-field">@Html.EditorFor(m => m.IsOperational)</div>
+
+    <input type="submit" value="SEND"/>
+}
